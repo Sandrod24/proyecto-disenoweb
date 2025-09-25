@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+    <title>Miau Café — Pastelería</title>
+
+    <link rel="stylesheet" href="./css/framework7.bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=DM+Serif+Display&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="./css/estilo.css" />
+</head>
+
+<body>
+    <div id="app">
+
+        <!-- Panel lateral (igual que en tus otras páginas) -->
+        <div class="panel panel-left panel-cover">
+            <div class="view">
+                <div class="page">
+                    <div class="page-content">
+                        <div class="block">
+                            <h3>Miau Café</h3>
+                            <p class="muted">Bienvenido</p>
+                        </div>
+                        <div class="list">
+                            <ul>
+                                <li><a href="/" class="item-link panel-close">Inicio</a></li>
+                                <li><a href="./about/" class="item-link panel-close">Acerca de</a></li>
+                                <li><a href="./menu/" class="item-link panel-close">Menú</a></li>
+                                <li><a href="./contacto/" class="item-link panel-close">Contacto</a></li>
+                                <li><a href="./login/" class="item-link panel-close">Iniciar sesión</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ÚNICA MAIN VIEW -->
+        <div class="view view-main view-init safe-areas" data-url="/categoria/pasteleria/">
+            <div class="page" data-name="categoria-pasteleria">
+                <!-- NAVBAR -->
+                <div class="navbar">
+                    <div class="navbar-bg"></div>
+                    <div class="navbar-inner">
+                        <div class="left">
+                            <a href="#" class="link panel-open" data-panel="left" aria-label="Abrir menú">
+                                <i class="fa fa-bars"></i>
+                            </a>
+                        </div>
+                        <div class="title">Pastelería</div>
+                        <div class="right">
+                            <a href="./orders/" class="link" aria-label="Ver orden"><i class="fa fa-receipt"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="page-content categoria-content">
+                    <!-- HERO / BANNER -->
+                    <div class="block no-padding">
+                        <div class="categoria-hero" role="img" aria-label="Pastelería">
+                            <img src="./img/donuts.jpg" alt="Pastelería" srcset="">
+                        </div>
+
+                        <!-- TÍTULO -->
+                        <div class="block">
+                            <h2 class="serif">Pastelería</h2>
+                        </div>
+
+                        <!-- LISTA DE PRODUCTOS -->
+                        <div class="list media-list no-hairlines-between categoria-list">
+                            <ul>
+                                <!-- Ítem -->
+                                <li class="categoria-item">
+                                    <div class="item-content">
+                                        <!-- TEXTO + CONTROLES -->
+                                        <div class="item-inner">
+                                            <div class="item-title-row">
+                                                <div class="item-title">Cheesecake de maracuyá</div>
+                                            </div>
+                                            <div class="item-subtitle muted"> Base de galleta y queso crema, cobertura
+                                                de coulis de maracuyá. Porción ~120 g.</div>
+
+                                            <div class="qty-row">
+                                                <button type="button"
+                                                    class="button button-small button-outline btn-qty btn-minus">–</button>
+                                                <input type="number" inputmode="numeric" pattern="[0-9]*" min="0"
+                                                    value="1" class="qty-input">
+                                                <button type="button"
+                                                    class="button button-small button-fill btn-qty btn-plus">+</button>
+                                            </div>
+                                        </div>
+
+                                        <!-- IMAGEN A LA DERECHA (clicable) -->
+                                        <div class="item-media">
+                                            <a href="./info-prod/" class="link">
+                                                <div class="thumb">
+                                                    <img src="./img/Postres/cheesecake maracuya.jpg"
+                                                        alt="Cheesecake maracuyá">
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="categoria-item">
+                                    <div class="item-content">
+                                        <div class="item-inner">
+                                            <div class="item-title-row">
+                                                <div class="item-title">Torta de chocolate </div>
+                                            </div>
+                                            <div class="item-subtitle muted">Bizcocho de chocolate, relleno de crema de
+                                                avellanas. Porción ~150 g.</div>
+                                            <div class="qty-row">
+                                                <button type="button"
+                                                    class="button button-small button-outline btn-qty btn-minus"
+                                                    aria-label="Restar">–</button>
+                                                <input type="number" inputmode="numeric" pattern="[0-9]*" min="0"
+                                                    value="1" class="qty-input">
+                                                <button type="button"
+                                                    class="button button-small button-fill btn-qty btn-plus"
+                                                    aria-label="Sumar">+</button>
+                                            </div>
+                                        </div>
+                                        <div class="item-media">
+                                            <a href="./info-prod/" class="link">
+                                                <div class="thumb">
+                                                    <img src="./img/Postres/matildas chocolate cake.jpg"
+                                                        alt="Matildas Chocolate Cake">
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="categoria-item">
+                                    <div class="item-content">
+                                        <div class="item-inner">
+                                            <div class="item-title-row">
+                                                <div class="item-title">Pie de limón</div>
+                                            </div>
+                                            <div class="item-subtitle muted"> Crema de limón fresca sobre base sablée,
+                                                terminado con merengue italiano tostado.</div>
+                                            <div class="qty-row">
+                                                <button type="button"
+                                                    class="button button-small button-outline btn-qty btn-minus"
+                                                    aria-label="Restar">–</button>
+                                                <input type="number" inputmode="numeric" pattern="[0-9]*" min="0"
+                                                    value="1" class="qty-input">
+                                                <button type="button"
+                                                    class="button button-small button-fill btn-qty btn-plus"
+                                                    aria-label="Sumar">+</button>
+                                            </div>
+                                        </div>
+                                        <div class="item-media">
+                                            <a href="./info-prod/" class="link">
+                                                <div class="thumb">
+                                                    <img src="./img/Postres/pie de limon.jpg"
+                                                        alt="Pie de limón">
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="categoria-item">
+                                    <div class="item-content">
+                                        <div class="item-inner">
+                                            <div class="item-title-row">
+                                                <div class="item-title">Tiramisú clásico</div>
+                                            </div>
+                                            <div class="item-subtitle muted"> Capas de bizcocho embebido en café
+                                                espresso, crema de mascarpone y cacao en polvo.</div>
+                                            <div class="qty-row">
+                                                <button type="button"
+                                                    class="button button-small button-outline btn-qty btn-minus"
+                                                    aria-label="Restar">–</button>
+                                                <input type="number" inputmode="numeric" pattern="[0-9]*" min="0"
+                                                    value="1" class="qty-input">
+                                                <button type="button"
+                                                    class="button button-small button-fill btn-qty btn-plus"
+                                                    aria-label="Sumar">+</button>
+                                            </div>
+                                        </div>
+                                        <div class="item-media">
+                                            <a href="./info-prod/" class="link">
+                                                <div class="thumb">
+                                                    <img src="./img/Postres/tiramisu.jpg"
+                                                        alt="Tiramisú clásico">
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- CTA Ver orden -->
+                        <div class="block ver-orden-wrap">
+                            <a href="./productos-2/" class="button button-large button-fill btn-primary">
+                                Ver más productos
+                            </a>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+
+        <script src="./js/framework7.bundle.min.js"></script>
+        <script src="./js/app.js"></script>
+</body>
+
+</html>

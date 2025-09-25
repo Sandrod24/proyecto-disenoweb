@@ -1,0 +1,793 @@
+:root {
+  /* Paleta del mockup */
+  --color-white: #ffffff;
+  --color-brown: #564C40;
+  --color-gray-100: #D9D9D9;
+  --color-gray-400: #646464;
+  --color-black: #000000;
+
+  /* Alias útiles */
+  --muted: var(--color-gray-400);
+
+  /* Mapear a variables de Framework7 v5 */
+  --f7-theme-color: var(--color-brown);
+  --f7-theme-color-rgb: 86, 76, 64;
+  /* #564C40 */
+  --f7-bars-bg-color: var(--color-brown);
+  --f7-bars-text-color: var(--color-white);
+  --f7-bars-border-color: var(--color-gray-100);
+  --f7-page-bg-color: var(--color-white);
+  --f7-text-color: var(--color-black);
+}
+
+body {
+  font-family: "DM Sans", system-ui, Arial, sans-serif;
+  background: var(--f7-page-bg-color);
+  color: var(--f7-text-color);
+  -webkit-font-smoothing: antialiased;
+}
+
+.serif {
+  font-family: "DM Serif Display", serif;
+  text-align: center;
+  color: var(--f7-text-color);
+}
+
+.muted {
+  color: var(--muted);
+  font-size: 0.95rem;
+  text-align: center;
+  margin: 10px 0 18px;
+}
+
+.hero {
+  max-width: 360px;
+  height: 70%;
+  margin: 24px auto;
+  background: var(--color-white);
+  border-radius: 22px;
+  padding: 28px;
+}
+
+.cat-logo {
+  width: 150px;
+  height: auto;
+  display: block;
+  margin: 6px auto 10px;
+}
+
+.buttons {
+  margin-top: 50px;
+  padding: 30px;
+}
+
+/* Botones propios */
+.btn-primary {
+  background: var(--color-brown);
+  border-color: var(--color-brown);
+  color: var(--color-white);
+
+}
+
+.btn-secondary {
+  background: #efefef;
+  color: #333;
+  border-color: #ddd;
+}
+
+/* Botones F7 con tus variantes */
+.button.btn-primary {
+  background: var(--color-brown);
+  border: 1px solid var(--color-brown);
+  color: #fff;
+  padding: 033 !important;
+}
+
+
+.button.btn-secondary {
+  background: transparent;
+  color: var(--color-brown);
+  border-color: var(--color-brown);
+}
+
+.hero-btn {
+  display: block;
+  height: 64px;
+  line-height: 64px;
+  border-radius: 18px;
+  font-family: "DM Serif Display", serif;
+  font-weight: 700;
+  text-transform: none;
+}
+
+.or {
+  margin: 10px 0;
+  color: #9b9b9b;
+  text-align: center;
+}
+
+.about_us .about-logo {
+  width: 120px;
+  display: block;
+  margin: 10px auto;
+}
+
+.team-grid .card {
+  border-radius: 14px;
+  padding: 16px;
+  background: var(--color-gray-100);
+  box-shadow: none;
+  margin-bottom: 16px;
+}
+
+.card-title {
+  text-align: center;
+  font-weight: 600;
+}
+
+.text-small {
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--color-brown);
+  margin-bottom: 6px;
+}
+
+.card-content p {
+  font-size: 0.85rem;
+  line-height: 1.3;
+  color: #555;
+  text-align: center;
+}
+
+.navbar {
+  background: var(--f7-bars-bg-color);
+}
+
+.navbar .title {
+  color: var(--f7-bars-text-color);
+  font-family: "DM Serif Display", serif;
+}
+
+.navbar .link,
+.navbar .link i,
+.navbar .fa-bars,
+.navbar .link.panel-open {
+  color: var(--f7-bars-text-color) !important;
+  /* blanco */
+}
+
+@media (min-width: 720px) {
+  .hero {
+    max-width: 420px;
+  }
+}
+
+
+
+
+/* === Tabbar inferior según mockup === */
+.app-tabbar {
+  background: var(--color-gray-100);
+  border-top: 0;
+  margin: 0 0 env(safe-area-inset-bottom, 0);
+}
+
+.app-tabbar .toolbar-inner {
+  justify-content: space-around;
+  padding: 8px 18px 12px;
+}
+
+.app-tabbar .link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 48px;
+  opacity: .55;
+  transition: opacity .15s ease;
+}
+
+.app-tabbar .link.tab-link-active {
+  opacity: 1;
+}
+
+.app-tabbar .tab-icon {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+  display: block;
+}
+
+/* HOME: solo hamburguesa y en negro */
+.page-home .navbar {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.page-home .navbar .navbar-bg {
+  display: none !important;
+}
+
+.page-home .navbar .title,
+.page-home .navbar .right {
+  display: none !important;
+}
+
+.page-home .navbar .left .link,
+.page-home .navbar .left .link i,
+.page-home .navbar .left .fa-bars {
+  color: #000 !important;
+  /* hamburguesa negra */
+}
+
+
+
+/* HOME: solo hamburguesa y en negro */
+.navbar {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.navbar .navbar-bg {
+  display: none !important;
+}
+
+.navbar .title,
+.navbar .right {
+  display: none !important;
+}
+
+.navbar .left .link,
+.navbar .left .link i,
+.navbar .left .fa-bars {
+  color: #000 !important;
+}
+
+
+
+/* Contenedor visual como tarjeta gris y bordes redondeados */
+.input-with-icon .item-input-wrap {
+  position: relative;
+  background: #e1e1e1;
+  border-radius: 7px;
+  padding: 10px 0px;
+}
+
+/* Tamaño y espaciamiento de los inputs */
+.input-with-icon input {
+  background: transparent;
+  height: 56px;
+  padding: 16px 16px;
+  font-size: 16px;
+
+}
+
+/* Icono a la derecha */
+.input-with-icon .input-icon {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+
+
+/* Asegurar el color del botón primario */
+.button.btn-primary {
+  background: var(--color-brown);
+  border: 1px solid var(--color-brown);
+  color: #fff;
+  border-radius: 16px;
+}
+
+.registro-logo {
+  width: 200px;
+  display: block;
+  margin: 10px auto;
+}
+
+
+
+
+
+/* Héroe/gris como tu wireframe */
+.categoria-hero {
+  width: 100%;
+  height: 180px;
+  background: #f7f7f7;
+  border-radius: 16px;
+  margin: 12px 0 8px;
+}
+
+.categoria-hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(1px);
+  -webkit-filter: blur(1px);
+}
+
+
+/* Espacio para no chocar con la toolbar */
+.page[data-name="categoria-pasteleria"] .categoria-content {
+  padding-bottom: 120px;
+}
+
+/* Lista y miniaturas a la derecha */
+.categoria-list .item-content {
+  align-items: flex-start;
+}
+
+.categoria-list .item-media {
+  margin-left: 12px;
+}
+
+.categoria-list .thumb {
+  width: 76px;
+  height: 76px;
+  background: #e9e9e9;
+  border-radius: 10px;
+}
+
+/* Fila cantidad (– [ ] +) */
+.qty-row {
+  display: flex;
+  align-items: center;
+  gap: 0px;
+  margin-top: 3px;
+}
+
+.qty-input {
+  width: 54px;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  height: 20px;
+  outline: none;
+}
+
+.btn-qty {
+  min-width: 20px;
+  height: 20px;
+  padding: 0;
+}
+
+/* CTA Ver orden (gris desactivado) */
+.ver-orden-wrap {
+  padding: 24px 0 8px;
+}
+
+.btn-orden[disabled] {
+  opacity: .5;
+}
+
+/* Ocultar flechas de inputs number */
+.qty-input {
+  -moz-appearance: textfield;
+}
+
+.qty-input::-webkit-outer-spin-button,
+.qty-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Fila de cantidad: – [input] + */
+.qty-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.qty-input {
+  width: 54px;
+  height: 34px;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  outline: none;
+  font-size: 14px;
+}
+
+/* Botones de cantidad, cuadrados y compactos (look mockup) */
+.btn-qty {
+  min-width: 36px;
+  height: 34px;
+  padding: 0;
+  border-radius: 6px;
+  font-weight: 700;
+}
+
+/* Miniatura a la derecha (ya lo tenía, reafirmo tamaños) */
+.categoria-list .thumb {
+  width: 76px;
+  height: 76px;
+  background: #e9e9e9;
+  border-radius: 10px;
+}
+
+
+
+/* pagina registro */
+
+
+/* --- Lista de categoría --- */
+.categoria-list .item-content {
+  align-items: flex-start;
+  padding-right: 22px;
+  padding-left: 0;
+  gap: 12px;
+}
+
+/* Limita el ancho del texto para que no choque con la miniatura */
+.categoria-list .item-inner {
+  left: 11px;
+  max-width: calc(100% - 100px);
+}
+
+/* Miniatura a la derecha */
+.categoria-list .item-media {
+  margin-left: 0;
+}
+
+.categoria-list .thumb {
+  width: 76px;
+  height: 76px;
+  background: #e9e9e9;
+  border-radius: 10px;
+}
+
+/* --- Controles de cantidad: más compactos --- */
+.qty-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 6px;
+}
+
+.btn-qty {
+  min-width: 32px;
+  height: 30px;
+  padding: 0 0;
+  border-radius: 6px;
+  font-weight: 700;
+  line-height: 30px;
+}
+
+.qty-input {
+  width: 44px;
+  height: 30px;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  outline: none;
+  font-size: 14px;
+}
+
+.qty-input {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+.qty-input::-webkit-outer-spin-button,
+.qty-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+/* Asegura un layout estable texto+miniatura */
+.categoria-list .item-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding-right: 16px;
+}
+
+.categoria-list .item-inner {
+  flex: 1 1 auto;
+  min-width: 0;
+  max-width: calc(100% - 100px);
+}
+
+/* Miniatura con tamaño fijo y recorte */
+.categoria-list .item-media {
+  flex: 0 0 76px;
+}
+
+.categoria-list .thumb {
+  width: 76px;
+  height: 76px;
+  border-radius: 10px;
+  background: #e9e9e9;
+  overflow: hidden;
+
+}
+
+/* La imagen llena la miniatura sin deformarse */
+.categoria-list .thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* recorte tipo “cover” */
+  display: block;
+}
+
+
+/* ---- Evitar que se corte el texto en listas con miniatura ---- */
+.media-list .item-title,
+.media-list .item-subtitle {
+  white-space: normal !important;
+  overflow: visible !important;
+  text-overflow: clip !important;
+  display: block;
+  line-height: 1.35;
+}
+
+/* El contenedor debe poder encoger para que el texto envuelva */
+.categoria-list .item-inner {
+  min-width: 0 !important;
+  max-width: calc(100% - 100px);
+}
+
+/* En esta lista queremos descripción alineada a la izquierda */
+.categoria-list .muted {
+  text-align: left;
+}
+
+
+.panel-left .list li>a.item-link i.fa-solid {
+  width: 18px;
+  text-align: center;
+  color: #564C40;
+}
+
+
+/* ====== Panel izquierdo "bonito" sin tocar el HTML ====== */
+.panel-left .page-content {
+  padding: 0;
+  background: #fff;
+}
+
+/* Header (su .block actual) */
+.panel-left .block {
+  margin: 0;
+  padding: 18px 16px 10px;
+  background: linear-gradient(180deg, rgba(86, 76, 64, .10), transparent 70%);
+}
+
+.panel-left .block h3 {
+  margin: 0 0 4px;
+  font-weight: 800;
+  font-size: 1.05rem;
+  color: #2b2b2b;
+}
+
+.panel-left .block .muted {
+  margin: 0;
+  color: #888;
+  font-size: .92rem;
+}
+
+/* Lista simple convertida a menú elegante */
+.panel-left .list {
+  margin: 8px 8px 12px;
+}
+
+.panel-left .list ul {
+  padding: 0;
+}
+
+.panel-left .list li {
+  list-style: none;
+}
+
+/* Cada enlace como fila flexible, con padding y radio */
+.panel-left .list li>a.item-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  justify-content: space-between;
+  padding: 12px 14px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #2b2b2b;
+  background: transparent;
+  transition: background .15s ease, transform .05s ease;
+}
+
+.panel-left .list li>a.item-link::after {
+  content: "\f054";
+  font: 900 0.85rem "Font Awesome 6 Free";
+  color: #c4c4c4;
+}
+
+.panel-left .list li>a.item-link:active {
+  background: rgba(86, 76, 64, .08);
+  transform: translateY(0.5px);
+}
+
+.panel-left .list li+li {
+  margin-top: 4px;
+}
+
+.panel-left .sidebar-cta {
+  padding: 10px 16px 14px;
+}
+
+.panel-left .sidebar-cta .button {
+  border-radius: 14px;
+  height: 46px;
+  line-height: 46px;
+  font-weight: 700;
+}
+
+.panel-left .sidebar-footer {
+  padding: 6px 16px 18px;
+  color: #9a9a9a;
+  font-size: .85rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Ancho cómodo en pantallas grandes */
+@media (min-width: 420px) {
+  .panel-left {
+    width: 320px;
+  }
+}
+
+
+
+/* Header del panel con logo */
+
+.panel-left .block.sidebar-header h3 {
+  margin: 0 0 6px;
+  font-weight: 800;
+  font-size: 1.05rem;
+  color: #2b2b2b;
+}
+
+.panel-left .block.sidebar-header .sidebar-logo {
+  width: 90x;
+  height: auto;
+  display: block;
+  margin: 2px auto 8px;
+  border-radius: 12px;
+
+}
+
+.panel-left .block.sidebar-header .muted {
+  margin: 0;
+  color: #888;
+  font-size: .92rem;
+}
+
+
+
+/* ===== Detalle de producto ===== */
+.page[data-name="info-prod"] .producto-content {
+  padding-bottom: 120px;
+}
+
+.producto-hero {
+  width: 100%;
+  height: 240px;
+  border-radius: 16px;
+  overflow: hidden;
+  margin: 12px 0 8px;
+  background: #f7f7f7;
+}
+
+.producto-hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+
+.producto-title {
+  font-family: "DM Serif Display", serif;
+  margin: 8px 0 6px;
+}
+
+.producto-meta {
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.producto-meta .precio {
+  font-weight: 700;
+  color: #2b2b2b;
+}
+
+.producto-meta .dot {
+  margin: 0 6px;
+  color: #aaa;
+}
+
+.producto-desc {
+  color: #555;
+  line-height: 1.45;
+}
+
+.producto-tags {
+  margin: 10px 0 14px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.producto-tags .tag {
+  background: #f0ece8;
+  color: #564C40;
+  border-radius: 999px;
+  padding: 6px 10px;
+  font-size: .85rem;
+  font-weight: 600;
+}
+
+/* Reusar tus steppers */
+.page[data-name="info-prod"] .qty-row {
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.page[data-name="info-prod"] .qty-input {
+  width: 54px;
+  height: 34px;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  outline: none;
+}
+
+.page[data-name="info-prod"] .btn-qty {
+  min-width: 36px;
+  height: 34px;
+  padding: 0;
+  border-radius: 6px;
+  font-weight: 700;
+}
+
+.page[data-name="info-prod"] .qty-input {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+.page[data-name="info-prod"] .qty-input::-webkit-outer-spin-button,
+.page[data-name="info-prod"] .qty-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.cta-row {
+  display: flex;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.cta-row .button {
+  border-radius: 14px;
+  height: 46px;
+  line-height: 46px;
+  font-weight: 700;
+}
+
+/* Secciones info */
+.producto-info h3 {
+  margin: 18px 0 6px;
+  font-weight: 700;
+}
+
+.producto-info p {
+  margin: 0 0 6px;
+  color: #555;
+}

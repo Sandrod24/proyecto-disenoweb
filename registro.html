@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+    <title>Miau Café — WebApp</title>
+
+    <!-- Framework7 v5 local -->
+    <link rel="stylesheet" href="./css/framework7.bundle.min.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=DM+Serif+Display&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="./css/estilo.css" />
+</head>
+
+<body>
+    <div id="app">
+
+        <!-- Panel lateral -->
+        <div class="panel panel-left panel-cover">
+            <div class="view">
+                <div class="page">
+                    <div class="page-content">
+                        <div class="block">
+                            <h3>Miau Café</h3>
+                            <p class="muted">Bienvenido</p>
+                        </div>
+                        <div class="list">
+                            <ul>
+                                <li><a href="/" class="item-link panel-close">Inicio</a></li>
+                                <li><a href="./about/" class="item-link panel-close">Acerca de Nosotros</a></li>
+                                <li><a href="./menu/" class="item-link panel-close">Menú</a></li>
+                                <li><a href="./contacto/" class="item-link panel-close">Contacto</a></li>
+                                <li><a href="./login/" class="item-link panel-close">Iniciar sesión</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ÚNICA MAIN VIEW -->
+        <div class="view view-main view-init safe-areas" data-url="/">
+            <!-- Página de Registro -->
+            <div class="page" data-name="registro">
+
+                <!-- HEADER / NAVBAR (conservado) -->
+                <div class="navbar">
+                    <div class="navbar-bg"></div>
+                    <div class="navbar-inner">
+                        <div class="left">
+                            <a href="#" class="link panel-open" data-panel="left" aria-label="Abrir menú">
+                                <i class="fa fa-bars"></i>
+                            </a>
+                        </div>
+                        <div class="title">Crear cuenta</div>
+                        <div class="right">
+                            <a href="./login/" class="link">Iniciar sesión</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="page-content registro-content">
+                    <div class="block text-align-center">
+                        <img src="./img/logo.png" alt="logo miau" class="registro-logo" />
+                        <h2 class="serif">Únete a Miau Café</h2>
+                        <p class="muted">Crea tu cuenta para disfrutar del menú, pedir y acariciar gatitos virtuales 🐾
+                        </p>
+                    </div>
+
+                    <form id="registro-form" class="list no-hairlines-md no-hairlines-between">
+                        <ul>
+                            <li class="item-content item-input input-with-icon">
+                                <div class="item-inner">
+                                    <div class="item-input-wrap">
+                                        <input type="text" name="username" placeholder="Nombre de usuario" required />
+                                        <span class="input-icon"><i class="fa-regular fa-user"></i></span>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="item-content item-input input-with-icon">
+                                <div class="item-inner">
+                                    <div class="item-input-wrap">
+                                        <input type="email" name="email" placeholder="E-mail" required />
+                                        <span class="input-icon"><i class="fa-regular fa-envelope"></i></span>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="item-content item-input input-with-icon">
+                                <div class="item-inner">
+                                    <div class="item-input-wrap">
+                                        <input type="password" name="password" placeholder="Contraseña" required
+                                            minlength="6" />
+                                        <span class="input-icon"><i class="fa-solid fa-lock"></i></span>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="item-content item-input input-with-icon">
+                                <div class="item-inner">
+                                    <div class="item-input-wrap">
+                                        <input type="password" name="password2" placeholder="Confirma tu contraseña"
+                                            required minlength="6" />
+                                        <span class="input-icon"><i class="fa-solid fa-lock"></i></span>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <div class="block">
+                            <button type="submit" class="button button-fill button-large btn-primary">Crear
+                                cuenta</button>
+                        </div>
+
+                        <div class="block text-align-center">
+                            <p class="muted">¿Ya tienes cuenta? <a href="/">Inicia sesión</a></p>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Toolbar inferior (conservada) -->
+                <div class="toolbar toolbar-bottom no-hairline-top app-tabbar">
+                    <div class="toolbar-inner">
+                        <a href="/" class="link tab-link" aria-label="Inicio">
+                            <img src="./img/home.png" class="tab-icon" alt="Inicio">
+                        </a>
+                        <a href="./search/" class="link tab-link" aria-label="Buscar">
+                            <img src="./img/lupa.png" class="tab-icon" alt="Buscar">
+                        </a>
+                        <a href="./orders/" class="link tab-link" aria-label="Pedidos">
+                            <img src="./img/food-delivery-hands.png" class="tab-icon" alt="Pedidos">
+                        </a>
+                        <a href="./about/" class="link tab-link" aria-label="Ajustes">
+                            <img src="./img/settings.png" class="tab-icon" alt="Ajustes">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- FIN PÁGINA -->
+        </div>
+
+    </div>
+
+    <script src="./js/framework7.bundle.min.js"></script>
+    <script src="./js/app.js"></script>
+</body>
+
+</html>

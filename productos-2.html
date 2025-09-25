@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+    <title>Miau Café — Pastelería</title>
+
+    <link rel="stylesheet" href="./css/framework7.bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=DM+Serif+Display&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="./css/estilo.css" />
+</head>
+
+<body>
+    <div id="app">
+
+        <!-- Panel lateral (igual que en tus otras páginas) -->
+        <div class="panel panel-left panel-cover">
+            <div class="view">
+                <div class="page">
+                    <div class="page-content">
+                        <div class="block">
+                            <h3>Miau Café</h3>
+                            <p class="muted">Bienvenido</p>
+                        </div>
+                        <div class="list">
+                            <ul>
+                                <li><a href="./" class="item-link panel-close">Inicio</a></li>
+                                <li><a href="./about/" class="item-link panel-close">Acerca de</a></li>
+                                <li><a href="./menu/" class="item-link panel-close">Menú</a></li>
+                                <li><a href="./contacto/" class="item-link panel-close">Contacto</a></li>
+                                <li><a href="./login/" class="item-link panel-close">Iniciar sesión</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ÚNICA MAIN VIEW -->
+        <div class="view view-main view-init safe-areas" data-url="/">
+            <div class="page" data-name="productos-2">
+                <!-- NAVBAR -->
+                <div class="navbar">
+                    <div class="navbar-bg"></div>
+                    <div class="navbar-inner">
+                        <div class="left">
+                            <a href="#" class="link panel-open" data-panel="left" aria-label="Abrir menú">
+                                <i class="fa fa-bars"></i>
+                            </a>
+                        </div>
+                        <div class="title">Bebidas Calientes</div>
+                        <div class="right">
+                            <a href="./orders/" class="link" aria-label="Ver orden"><i class="fa fa-receipt"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="page-content categoria-content">
+                    <!-- HERO / BANNER -->
+                    <div class="block no-padding">
+                        <div class="categoria-hero" role="img" aria-label="Pastelería">
+                            <img src="./img/Bebidas Calientes/Manzanilla.png" alt="Pastelería" srcset="">
+                        </div>
+
+                        <!-- TÍTULO -->
+                        <div class="block">
+                            <h2 class="serif">Bebidas Calientes</h2>
+                        </div>
+
+                        <!-- LISTA DE PRODUCTOS -->
+                        <div class="list media-list no-hairlines-between categoria-list">
+                            <ul>
+                                <!-- Cappuccino -->
+                                <li class="categoria-item">
+                                    <div class="item-content">
+                                        <div class="item-inner">
+                                            <div class="item-title-row">
+                                                <div class="item-title">Cappuccino</div>
+                                            </div>
+                                            <div class="item-subtitle muted">
+                                                Espresso doble con leche vaporizada y capa de espuma.
+                                            </div>
+                                            <div class="qty-row">
+                                                <button type="button"
+                                                    class="button button-small button-outline btn-qty btn-minus">–</button>
+                                                <input type="number" inputmode="numeric" pattern="[0-9]*" min="0"
+                                                    value="1" class="qty-input">
+                                                <button type="button"
+                                                    class="button button-small button-fill btn-qty btn-plus">+</button>
+                                            </div>
+                                        </div>
+                                        <div class="item-media">
+                                            <div class="thumb">
+                                                <img src="./img/Bebidas Calientes/cappuchino.png" alt="Cappuccino">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <!-- Chocolate caliente -->
+                                <li class="categoria-item">
+                                    <div class="item-content">
+                                        <div class="item-inner">
+                                            <div class="item-title-row">
+                                                <div class="item-title">Chocolate caliente</div>
+                                            </div>
+                                            <div class="item-subtitle muted">
+                                                Cacao cremoso con leche y un toque de canela.
+                                            </div>
+                                            <div class="qty-row">
+                                                <button type="button"
+                                                    class="button button-small button-outline btn-qty btn-minus">–</button>
+                                                <input type="number" inputmode="numeric" pattern="[0-9]*" min="0"
+                                                    value="1" class="qty-input">
+                                                <button type="button"
+                                                    class="button button-small button-fill btn-qty btn-plus">+</button>
+                                            </div>
+                                        </div>
+                                        <div class="item-media">
+                                            <div class="thumb">
+                                                <img src="./img/Bebidas Calientes/chocolate.png" alt="Chocolate caliente">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <!-- Espresso -->
+                                <li class="categoria-item">
+                                    <div class="item-content">
+                                        <div class="item-inner">
+                                            <div class="item-title-row">
+                                                <div class="item-title">Espresso</div>
+                                            </div>
+                                            <div class="item-subtitle muted">
+                                                Tiro intenso de café 100% arábica, 30&nbsp;ml.
+                                            </div>
+                                            <div class="qty-row">
+                                                <button type="button"
+                                                    class="button button-small button-outline btn-qty btn-minus">–</button>
+                                                <input type="number" inputmode="numeric" pattern="[0-9]*" min="0"
+                                                    value="1" class="qty-input">
+                                                <button type="button"
+                                                    class="button button-small button-fill btn-qty btn-plus">+</button>
+                                            </div>
+                                        </div>
+                                        <div class="item-media">
+                                            <div class="thumb">
+                                                <img src="./img/Bebidas Calientes/espresso.png" alt="Espresso">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <!-- Té de manzanilla -->
+                                <li class="categoria-item">
+                                    <div class="item-content">
+                                        <div class="item-inner">
+                                            <div class="item-title-row">
+                                                <div class="item-title">Té de manzanilla</div>
+                                            </div>
+                                            <div class="item-subtitle muted">
+                                                Infusión de manzanilla natural, ideal para la tarde.
+                                            </div>
+                                            <div class="qty-row">
+                                                <button type="button"
+                                                    class="button button-small button-outline btn-qty btn-minus">–</button>
+                                                <input type="number" inputmode="numeric" pattern="[0-9]*" min="0"
+                                                    value="1" class="qty-input">
+                                                <button type="button"
+                                                    class="button button-small button-fill btn-qty btn-plus">+</button>
+                                            </div>
+                                        </div>
+                                        <div class="item-media">
+                                            <div class="thumb">
+                                                <img src="./img/Bebidas Calientes/Manzanilla.png" alt="Té de manzanilla">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- CTA Ver orden -->
+                   
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+
+        <script src="./js/framework7.bundle.min.js"></script>
+        <script src="./js/app.js"></script>
+</body>
+
+</html>
